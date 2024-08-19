@@ -8,7 +8,7 @@ app = FastAPI()
 async def get():
     return HTMLResponse(content = "<html><body><h1>(:D)|￣|_</h1></body></html>")
 
-@app.websocket("/ws")
+@app.websocket("/")
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     while True:
